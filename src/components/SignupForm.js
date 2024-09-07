@@ -42,7 +42,9 @@ const SignupForm=({setIsLoggedIn})=> {
     <button  className='gap-3'>
         Instructor
     </button>
-<form onSubmit={submitHandler}>
+
+    
+    <form onSubmit={submitHandler}>
    <label>First Name <sup>*</sup>
    <br/>
    <input type="text" className='border '
