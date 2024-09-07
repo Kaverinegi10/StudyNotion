@@ -1,12 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
+import toast from 'react-hot-toast';
 import { FaRegEyeSlash } from "react-icons/fa";
 import { IoEyeOutline } from "react-icons/io5";
+import { Navigate, useNavigate } from 'react-router-dom';
 
-const SignupForm=()=> {
+const SignupForm=({setIsLoggedIn})=> {
+    const navigate=useNavigate();
     const[formData,setFormData]=useState({
         firstName:"", lastName:"",email:"",Password:"",Confirm:""
     })
+   
     const[showPassword, setShowPassword]=useState(false);
 
 
@@ -18,6 +22,18 @@ const SignupForm=()=> {
         }
         ))
     }
+    function submitHandler(event){
+        event.preventDefault();
+        if(formData.Password != formData.Confirm){
+            toast.error("passwords do not match")
+            return;
+        }
+        setIsLoggedIn(true);
+        toast.success("Account Created");
+
+
+        navigate("/Dashboard")
+    }
   return (
     <div>
     <button className='gap-3'>
@@ -26,7 +42,7 @@ const SignupForm=()=> {
     <button  className='gap-3'>
         Instructor
     </button>
-<form>
+<form onSubmit={submitHandler}>
    <label>First Name <sup>*</sup>
    <br/>
    <input type="text" className='border '
