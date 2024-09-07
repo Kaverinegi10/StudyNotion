@@ -43,7 +43,7 @@ const SignupForm=({setIsLoggedIn})=> {
         Instructor
     </button>
 
-    
+
     <form onSubmit={submitHandler}>
    <label>First Name <sup>*</sup>
    <br/>
@@ -54,7 +54,8 @@ const SignupForm=({setIsLoggedIn})=> {
    value={FormData.firstName}
    id='FirstName'/>
    </label>
-<label>Last Name <sup>*</sup>
+   
+    <label>Last Name <sup>*</sup>
   <br/>
    <input type="text" className='border '
    placeholder='Enter Last Name'
