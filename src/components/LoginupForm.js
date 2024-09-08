@@ -32,8 +32,8 @@ const LoginupForm  = ({setIsLoggedIn})  => {
     }
       return (
     <div>
-     <form onSubmit={SubmitHandler} className='flex flex-col w-full  mt-4'>
-      <label className="w-full text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]"  htmlFor='firstinput'>Email Address<sup className='text-pink-200'>*</sup>
+       <form onSubmit={SubmitHandler} className='flex flex-col w-full  mt-4'>
+       <label className="w-full text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]"  htmlFor='firstinput'>Email Address<sup className='text-pink-200'>*</sup>
 
       <br/>
        <input type='text'
