@@ -9,11 +9,6 @@ const LoginupForm  = ({setIsLoggedIn})  => {
    
     const navigate=useNavigate();
     
-    function clickHandler(){
-navigate("/Signup")
-    }
-
-    
     const[formData,setFormData]=useState({
 email:"",password:""
     })
@@ -35,41 +30,42 @@ email:"",password:""
 
 
     }
-  return (
+      return (
     <div>
-     <form onSubmit={SubmitHandler}>
-      <label htmlFor='firstinput'>Enter email address:<sup>*</sup></label>
+     <form onSubmit={SubmitHandler} className='flex flex-col w-full  mt-4'>
+      <label className="w-full text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]"  htmlFor='firstinput'>Email Address<sup className='text-pink-200'>*</sup>
+
       <br/>
        <input type='text'
-       className='shadow border rounded py-2 px-3 text-gray-700'
+       className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
         id="email"
         name='email'
         onChange={changeHandler}
         value={formData.email}
-        placeholder='enter email id'/>
-<br/>
-      <label htmlFor='secondInput'>Password:<sup>*</sup>
+        placeholder='Enter email address' />
+        </label>
+
+       <br/>
+      <label className='w-full text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem' htmlFor='secondInput'>Password<sup className='text-pink-200'>*</sup>
       <br/>
         <input type={showPassword ? ("text"):("password")}
         id="password"
         name='password'
         value={formData.password}
         onChange={changeHandler}
-        className='border rounded  py-2 px-3 text-gray-700 '
+        className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] '
         placeholder='Enter Password'/>
 
         <span onClick={()=> setShowPassword((prev)=> !prev)}>
-            {showPassword ? (<FaRegEyeSlash/> ):(<IoEyeOutline/>)}
+           
         </span>
 
         <Link to="#">
-            <p>Forget Password</p>
+            <p className='text-blue-100 '>Forget Password</p>
         </Link>
         </label>
 
         <button>Sign In</button>
-        <br/>
-        <button onClick={clickHandler} >Create Account</button>
         
       </form>
      
@@ -78,3 +74,5 @@ email:"",password:""
 }
 
 export default LoginupForm
+        
+        

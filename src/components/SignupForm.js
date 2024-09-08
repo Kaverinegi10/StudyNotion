@@ -45,7 +45,7 @@ const SignupForm=({setIsLoggedIn})=> {
 
 
     <form onSubmit={submitHandler}>
-   <label>First Name <sup>*</sup>
+   <label>First Name <sup className='text-pink-200'>*</sup>
    <br/>
    <input type="text" className='border '
    placeholder='Enter First Name'
@@ -54,8 +54,8 @@ const SignupForm=({setIsLoggedIn})=> {
    value={FormData.firstName}
    id='FirstName'/>
    </label>
-   
-    <label>Last Name <sup>*</sup>
+
+    <label>Last Name <sup className='text-pink-200'>*</sup>
   <br/>
    <input type="text" className='border '
    placeholder='Enter Last Name'
@@ -66,7 +66,7 @@ const SignupForm=({setIsLoggedIn})=> {
   </label>
 
 <br/>
-<label>Email Address <sup>*</sup></label>
+<label>Email Address <sup className='text-pink-200'>*</sup></label>
   <br/>
    <input type="text" className='border '
    placeholder='Enter email address'
@@ -76,7 +76,7 @@ const SignupForm=({setIsLoggedIn})=> {
    id='email'/>
 
 <br/>
-<label>Create Password <sup>*</sup>
+<label>Create Password <sup className='text-pink-200'>*</sup>
   <br/>
    <input type={showPassword ? ("text"):("password")} className='border '
    placeholder='Enter Password'
@@ -88,7 +88,7 @@ const SignupForm=({setIsLoggedIn})=> {
    
    </span>
    </label>
-<label>Confirm Password <sup>*</sup>
+<label>Confirm Password <sup className='text-pink-200'>*</sup>
   <br/>
    <input type={showPassword ? ("text") : ("password")} className='border '
    placeholder='Confirm Password'
