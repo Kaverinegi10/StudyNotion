@@ -10,7 +10,7 @@ const LoginupForm  = ({setIsLoggedIn})  => {
     const navigate=useNavigate();
     
     const[formData,setFormData]=useState({
-email:"",password:""
+    email:"",password:""
     })
     const[showPassword, setShowPassword]=useState(false);
 
