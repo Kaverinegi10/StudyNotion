@@ -56,11 +56,8 @@ const LoginupForm  = ({setIsLoggedIn})  => {
         className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px] '
         placeholder='Enter Password'/>
 
-        <span onClick={()=> setShowPassword((prev)=> !prev)}>
-           
-        </span>
-
-        <Link to="#">
+        <span onClick={()=> setShowPassword((prev)=> !prev)}></span>
+     <Link to="#">
             <p className='text-blue-100 '>Forget Password</p>
         </Link>
         </label>
