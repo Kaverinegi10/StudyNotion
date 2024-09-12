@@ -11,7 +11,7 @@ function Template({title,desc1,desc2,image,formtype,setIsLoggedIn}) {
     console.log(formtype);
   return (
     <div className='flex max-w-[1160px] py-16 mx-auto gap-x-12 gap-y-0 justify-between'>
-<div className=''>
+<div className='w-11/12 max-w-[450px]'>
     <h1 className='text-richblack-5 text-[1.875rem] font-semibold leading-[2.375rem]'>{title}</h1>
     <br/>
     <p className=' text-[1.125rem] w-full mt-4 leadin[1.625rem]'>
