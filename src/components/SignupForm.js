@@ -159,7 +159,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
           </label>
         </div>
         <br />
-        <button className="w-full bg-yellow-50 py-[6px] px-[8px]  rounded-[8px] font-med text-black">
+        <button className="w-full bg-yellow-50 py-[6px] px-[8px] rounded-[8px] font-med text-black">
           Create Account
         </button>
       </form>

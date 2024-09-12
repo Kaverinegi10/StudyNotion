@@ -4,6 +4,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import {FcGoogle} from "react-icons/fc"
 
 const LoginupForm = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -79,9 +80,22 @@ const LoginupForm = ({ setIsLoggedIn }) => {
           </Link>
         </label>
 
-        <button className="bg-yellow-50 py-[8px] py-[12px] mt-2  rounded-[8px] font-med text-black">
+        <button className="bg-yellow-50 py-[8px] py-[12px] mt-2  rounded-[8px] mt-3 font-med text-black">
           Sign In
         </button>
+        <div className='flex w-full items-center mt-5  gap-x-2'>
+                <div className='w-full h-[1px] bg-richblack-700'></div>
+                <p className='text-richblack-700 font-medium leading[1.375rem]'>
+                    OR
+                </p>
+                <div className='w-full h-[1px] bg-richblack-700'></div>
+            </div>
+
+        <button className='w-full flex justify-center items-center rounded-[8px] font-medium text-richblack-100
+            border border-richblack-700 px-[12px] py-[8px] mt-4 gap-x-2  '>
+                <FcGoogle/>
+                <p>Sign Up with Google</p>
+            </button>
       </form>
     </div>
   );
