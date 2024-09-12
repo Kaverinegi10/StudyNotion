@@ -37,8 +37,8 @@ const SignupForm = ({ setIsLoggedIn }) => {
     navigate("/Dashboard");
   }
   return (
-    <div>
-      <div className="rounded-[25px] bg-richblack-800 border py-2  max-w-max gap-x-6 my-6 p-1 flex  text-white">
+    <div className="">
+      <div className="rounded-[25px] bg-richblack-800 border max-w-max gap-x-6 my-3 p-1 flex  text-white ">
         <button
           className={`${
             accountType == "student"
@@ -62,13 +62,13 @@ const SignupForm = ({ setIsLoggedIn }) => {
       </div>
 
       <form onSubmit={submitHandler}>
-        <div className="w-full flex gap-x-4 mt-4">
+        <div className="w-full flex gap-x-4 mt-2">
           <label className=" w-full text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]">
             First Name <sup className="text-pink-200">*</sup>
             <br />
             <input
               type="text"
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[12px]"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[7px]"
               placeholder="Enter First Name"
               name="firstName"
               onChange={changeHandler}
@@ -82,7 +82,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
             <br />
             <input
               type="text"
-              className="bg-richblack-800  rounded-[0.5rem] text-richblack-5  p-[12px] "
+              className="bg-richblack-800  rounded-[0.5rem] text-richblack-5 p-[7px] "
               placeholder="Enter Last Name"
               name="lastName"
               onChange={changeHandler}
@@ -98,7 +98,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
         <br />
         <input
           type="text"
-          className="bg-richblack-800 w-full rounded-[0.5rem] text-richblack-5 p-[12px] "
+          className="bg-richblack-800 w-full rounded-[0.5rem] text-richblack-5 p-[7px] "
           placeholder="Enter email address"
           name="email"
           onChange={changeHandler}
@@ -114,7 +114,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
             <br />
             <input
               type={showPassword ? "text" : "password"}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[12px]"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[7px]"
               placeholder="Enter Password"
               name="Password"
               onChange={changeHandler}
@@ -122,13 +122,13 @@ const SignupForm = ({ setIsLoggedIn }) => {
               id="Password"
             />
             <span
-              className="absolute cursor-pointer right-12 top-[33px] "
+              className="absolute cursor-pointer right-12 top-[31px] "
               onClick={() => setShowPassword((prev) => !prev)}
             >
               {showPassword ? (
-                <FaRegEyeSlash fontSize={24} fill="#AFB2BF" />
+                <FaRegEyeSlash fontSize={20} fill="#AFB2BF" />
               ) : (
-                <IoEyeOutline fontSize={24} fill="#AFB2BF" />
+                <IoEyeOutline fontSize={20} fill="#AFB2BF" />
               )}
             </span>
           </label>
@@ -139,7 +139,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
             <br />
             <input
               type={showConfirmPassword ? "text" : "password"}
-              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[12px]"
+              className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[7px]"
               placeholder="Confirm Password"
               name="Confirm"
               onChange={changeHandler}
@@ -147,19 +147,19 @@ const SignupForm = ({ setIsLoggedIn }) => {
               id="Confirm"
             />
             <span
-              className="absolute cursor-pointer left-[150px] top-[33px] "
+              className="absolute cursor-pointer left-[140px] top-[31px] "
               onClick={() => setConfirmShowPassword((prev) => !prev)}
             >
               {showConfirmPassword ? (
-                <FaRegEyeSlash fontSize={24} fill="#AFB2BF" />
+                <FaRegEyeSlash fontSize={20} fill="#AFB2BF" />
               ) : (
-                <IoEyeOutline fontSize={24} fill="#AFB2BF" />
+                <IoEyeOutline fontSize={20} fill="#AFB2BF" />
               )}
             </span>
           </label>
         </div>
         <br />
-        <button className="w-full bg-yellow-50 py-[8px] py-[12px] mt-2 rounded-[8px] font-med text-black">
+        <button className="w-full bg-yellow-50 py-[6px] px-[8px]  rounded-[8px] font-med text-black">
           Create Account
         </button>
       </form>

@@ -48,7 +48,7 @@ const LoginupForm = ({ setIsLoggedIn }) => {
 
         <br />
         <label
-          className="w-full relative text-[0.875rem]  text-richblack-5 mb-1 leading-[1.375rem"
+          className="w-full relative text-[0.875rem]  text-richblack-5 leading-[1.375rem"
           htmlFor="secondInput"
         >
           Password<sup className="text-pink-200">*</sup>
@@ -73,13 +73,13 @@ const LoginupForm = ({ setIsLoggedIn }) => {
             )}
           </span>
           <Link to="#">
-            <p className="text-xs text-blue-100 mt-1 w-max ml-auto">
+            <p className="text-xs text-blue-100  w-max ml-auto">
               Forget Password
             </p>
           </Link>
         </label>
 
-        <button className="bg-yellow-50 py-[8px] py-[12px] mt-9 rounded-[8px] font-med text-black">
+        <button className="bg-yellow-50 py-[8px] py-[12px] mt-2  rounded-[8px] font-med text-black">
           Sign In
         </button>
       </form>
