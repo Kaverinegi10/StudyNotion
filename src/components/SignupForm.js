@@ -16,6 +16,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
   });
 
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setConfirmShowPassword] = useState();
   const [accountType, setAccountType] = useState("student");
 
   function changeHandler(event) {
@@ -137,7 +138,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
             Confirm Password <sup className="text-pink-200">*</sup>
             <br />
             <input
-              type={showPassword ? "text" : "password"}
+              type={showConfirmPassword ? "text" : "password"}
               className="bg-richblack-800 rounded-[0.5rem] text-richblack-5  p-[12px]"
               placeholder="Confirm Password"
               name="Confirm"
@@ -147,9 +148,9 @@ const SignupForm = ({ setIsLoggedIn }) => {
             />
             <span
               className="absolute cursor-pointer left-[150px] top-[33px] "
-              onClick={() => setShowPassword((prev) => !prev)}
+              onClick={() => setConfirmShowPassword((prev) => !prev)}
             >
-              {showPassword ? (
+              {showConfirmPassword ? (
                 <FaRegEyeSlash fontSize={24} fill="#AFB2BF" />
               ) : (
                 <IoEyeOutline fontSize={24} fill="#AFB2BF" />
@@ -158,7 +159,7 @@ const SignupForm = ({ setIsLoggedIn }) => {
           </label>
         </div>
         <br />
-        <button className="w-full bg-yellow-50 py-[8px] py-[12px] mt-9 rounded-[8px] font-med text-black">
+        <button className="w-full bg-yellow-50 py-[8px] py-[12px] mt-2 rounded-[8px] font-med text-black">
           Create Account
         </button>
       </form>

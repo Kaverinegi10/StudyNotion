@@ -6,6 +6,7 @@ import frameImage from "../assets/frame.png";
 import {FcGoogle} from "react-icons/fc"
 
 
+
 function Template({title,desc1,desc2,image,formtype,setIsLoggedIn}) {
 
     console.log(formtype);
@@ -14,7 +15,7 @@ function Template({title,desc1,desc2,image,formtype,setIsLoggedIn}) {
 <div className='w-11/12 max-w-[450px]'>
     <h1 className='text-richblack-5 text-[1.875rem] font-semibold leading-[2.375rem]'>{title}</h1>
     <br/>
-    <p className=' text-[1.125rem] w-full mt-4 leadin[1.625rem]'>
+    <p className=' text-[1.125rem] w-full mt-2 leadin[1.625rem]'>
         <span className='text-richblack-100 w-11/12'>{desc1}</span>
         <br/>
         <span className='text-blue-100 italic'>{desc2}</span>
@@ -31,9 +32,9 @@ function Template({title,desc1,desc2,image,formtype,setIsLoggedIn}) {
 </div>
     <div>
     <button className='w-full flex  items-center justify-center border rounded-[8px] font-medium  px-[12px] py-[8px]
-     border-richblack-700 gap-x-2 mt-6 text-gray-700 w-full text-white '>
+     border-richblack-700 gap-x-2 mt-4 text-gray-700 w-full text-white '>
      <FcGoogle/>
-        <p className='mb-'>Sign in with Google</p>
+        <p className=''>Sign in with Google</p>
     </button>
 </div>
 </div>
